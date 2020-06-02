@@ -7,7 +7,7 @@ class Modal extends Component {
 
     //optimizaiton - the component updates only, when the props show will change!
     shouldComponentUpdate(nextProps, nextState) {
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     render() {
